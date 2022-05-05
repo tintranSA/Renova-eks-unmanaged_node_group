@@ -1,1 +1,1 @@
-# 1 unmanaged_node_group
+# unmanaged_node_group
