@@ -8,5 +8,5 @@ eksctl create nodegroup -f unmanaged_node_group.yaml
 ```
 eksctl get nodegroup --cluster <EKS_CLUSTER_NAME>
 ```
-4. The output should be as follows:
+4. The output should be like as picture unmanaged.png
 
