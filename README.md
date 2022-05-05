@@ -9,4 +9,4 @@ eksctl create nodegroup -f unmanaged_node_group.yaml
 eksctl get nodegroup --cluster <EKS_CLUSTER_NAME>
 ```
 4. The output should be as follows:
-[Uploading Bản sao của TRUNG TIN 150215.jpg…]()
+
