@@ -1,14 +1,7 @@
 # unmanaged_node_group
+1. To create an EKS node group, please use the below command
 ```
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Example</title>
-  </head>
-  <body>
-    <h1>HÀNH TRÌNH LÊN MÂY</h1>
-    <p>cloud journey.</p>
-  </body>
-</html>
+eksctl create nodegroup -f unmanaged_node_group
+.yaml
 
 ```
