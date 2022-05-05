@@ -1,0 +1,30 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: <EKS_CLUTER_NAME>
+  region: <AWS_REGION>
+
+NodeGroups:
+  - name: <NODE_GROUP_NAME>
+    availabilityZones: ["ap-southeast-1a", "ap-southeast-1b", "ap-southeast-1c"]
+    instanceTypes: <EC2_INSTANCE_TYPE>
+    instanceName: <EC2_INSTANCE_NAME>
+    desiredCapacity: <ASG_DESIRED_SIZE>
+    minSize: <ASG_MIN_SIZE>
+    maxSize: <ASG_MAX_SIZE>
+    volumeSize: <EBS_VOLUME_SIZE>
+    privateNetworking: true
+    labels:
+      role: <VALUE>
+      env: <VALUE>
+    iam:
+      attachPolicyARNs:
+        - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
+        - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
+        - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+        - arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy
+        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+      withAddonPolicies:
+        autoScaler: True
+        ebs: True
